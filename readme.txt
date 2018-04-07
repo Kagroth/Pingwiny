@@ -1,0 +1,1 @@
+Strona powinna byæ uruchamiana na lokalnym serwerze ze wzglêdu na wykorzystanie metody .load() z biblioteki jQuery.

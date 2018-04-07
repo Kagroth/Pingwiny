@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Pingwiny</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Strona informacyjna dotycząca serialu Pingwiny z Madagaskaru">
+        <meta name="keywords" content="pingwiny, madagaskar, skipper, kowalski, szeregowy, rico, król julian, julian, mort, zoo, central park">
+        <meta name="author" content="Kamil Bania">
+        
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/index.css" />
+        
+        <script src="script/jquery-3.2.1.min.js"></script>
+        <script src="script/index.js"></script>
+        <script>
+            window.addEventListener('load', main, false);
+        </script>
+    </head>
+    <body>
+        <header>
+            <nav id="menuTop" class="flexible">
+                <div id="logoTop" class="centerBg centerContent flexible"> <label for="topImg"></label></div>
+                <div id="navSerial" class="centerContent flexible"><label for="description">Serial</label></div>
+                <div id="navHeroes" class="centerContent flexible"><label for="heroes">Bohaterowie</label></div>
+                <div id="navEpisodes" class="centerContent flexible"><label for="episodes">Odcinki</label></div>
+            </nav>
+        </header>
+        <main class="centerContent flexible">
+            <section id="topImg"></section>
+            <section id="description" class="centerContent flexible">
+                Skipper, Kowalski, Rico i Szeregowy tworzą niezrównaną bandę pingwinów-komandosów, którzy po
+                zamieszkaniu w zoo, w nowojorskim Central Parku, strzegą porządku wśród zwierzęcych mieszkańców. Każdy z nich ma inne zdolności
+                pozwalające wykaraskać się z najgorszej sytuacji. W każdym odcinku przeżywają nowe przygody, ale i pakują się w nowe tarapaty. 
+            </section>
+            <section id="heroes" class="flexible">
+                <section id="heroSelector" class="flexible">
+                    <nav id="heroMenu" class="flexible">
+                        <div id="penguins" class="centerContent flexible">Pingwiny</div>
+                        <div id="lemurs" class="centerContent flexible">Lemury</div>  
+                    </nav>
+                    <div id="heroIconsTarget">
+                        <!-- ŁADOWANE MENU -->                           
+                    </div>
+                    <div id="heroImg" class="centerBg flexible"></div>
+                </section>
+                <section id="heroDescription" class="centerContent flexible">
+                    <div></div>
+                </section>
+            </section>
+            <section id="episodes" class="flexible">
+                <h1>Spis odcinków</h1>
+                <div id="episodesMenu" class="centerContent flexible">
+                    <div id="seasonOne" class="centerContent flexible">Sezon 1</div>
+                    <div id="seasonTwo" class="centerContent flexible">Sezon 2</div>
+                    <div id="seasonThree" class="centerContent flexible">Sezon 3</div>
+                </div>
+                <div id="episodesTable">
+                </div>
+            </section>  
+        </main>
+        <footer class="centerContent flexible">
+            Created by Kamil Bania
+        </footer>
+    </body>
+</html>

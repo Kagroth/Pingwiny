@@ -1,0 +1,365 @@
+/***** GLOWNE KLASY *******/
+.flexible
+{
+    display: flex;
+}
+.centerContent
+{
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.centerBg
+{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;    
+}
+/*************************************/
+/***************GORNE MENU**************/
+header
+{
+    height: 4%;
+    background-color: rgba(76, 70, 75, 0.45);
+    position: fixed;
+        top: 0;
+        left: 0;
+        
+    z-index:1000;
+}
+
+#menuTop
+{
+    width: 50%;
+    height: 100%;
+    background-color: inherit;
+    flex-direction: row;
+    position: absolute;
+        top:0%;
+        left:25%;
+        
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+    z-index: 100003;
+    
+    transition: 1s;
+}
+
+#menuTop.moved
+{
+    transition: 1s;
+    left: 0%;
+}
+
+/*logo*/
+#menuTop #logoTop
+{
+    width: 10%;
+    border-left: solid 1px black;
+    background-image: url("../img/napis.jpg");
+}
+
+#menuTop div
+{
+    width: 30%;
+    height: 100%;
+    text-align: center;
+    border-right: solid 1px black;
+    overflow: hidden;
+    flex-direction: column;
+    background-color: inherit;
+    color:white;
+    text-shadow: 0.1em 0.1em 0.1em #4C464B;
+    font-size: 125%;
+}
+
+#menuTop div:hover
+{
+    text-shadow: 0.1em 0.1em 0.1em #4AA4FF;
+}
+/************KONIEC - GORNE MENU********************/
+
+/*********** KONTENER GLOWNY*************************/
+main
+{
+    position: absolute;
+        top: 4%;
+        left: 0;
+    flex-direction: column;;
+    width: 100%;
+    height: 350%;
+    background-color: lightblue;
+}
+
+#topImg
+{
+    height: 80%;
+    order: 1;
+    background-image: url("../img/main.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: blue;
+}
+
+/*****************OPIS SERIALU**********************/
+#description
+{
+    height: 100%;
+    order: 2;
+    background-color: #FFAA00;
+    color: #000000;
+    font-size: 4vmin;
+    font-family: Verdana, Helvetica, sans-serif;
+    
+    flex-direction: column;
+    text-align: justify;
+    /*to jest podejrzane, zmeinic na media queries*/
+    line-height:220%;
+    padding: 0 10%;
+}
+/************** KONIEC OPISU SERIALU ****************/
+
+/************** BOHATEROWIE OPIS *******************/
+#heroes
+{
+    height: 92%;
+    order: 3;
+    flex-direction: row;
+}
+
+#heroes #heroSelector
+{
+    background-color: #FFAA00;
+    width: 40%;
+    height: 100%;
+    order: 2;
+    flex-direction: column;
+    z-index: 2;
+    border-top: solid 1px;
+    border-left: solid 1px;
+    border-bottom: solid 1px;
+}
+
+#heroes #heroDescription
+{
+    order: 1;
+    width:60%;
+    height: 100%;
+    background-color: #3DB4CC;
+    color: #000000;
+    font-size: 105%;
+    font-family: Verdana, Helvetica, sans-serif;
+    
+    flex-direction: column;
+    text-align: justify;
+    /*to jest podejrzane, zmienic na media queries*/
+    line-height: 220%;
+    padding: 0 5%;
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+    
+}
+
+@media screen and (max-width: 1360px)
+{
+    #heroes #heroDescription
+    {
+        font-size: 75%;
+    }
+}
+
+#heroes #heroMenu
+{
+    background-color: yellow;
+    flex-direction: row;
+    width: 100%;
+    height: 5%;
+    z-index: 3;
+}
+
+#heroes #heroMenu div
+{
+    flex-direction: row;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    background-color: #3DB4CC;
+    font-size: 2.5vmin;
+}
+
+#heroes #heroMenu div:hover
+{
+    text-shadow: 0.1em 0.1em 0.1em orange;
+    transition: 0.5s;
+}
+
+
+#heroes #heroMenu div.selected
+{
+    text-shadow: 0.1em 0.1em 0.1em orange;
+    font-size: 3vmin;
+}
+
+#heroes #heroIconsTarget
+{
+    width: 90%;
+    height: 15%;
+    margin-left: 5%;
+}
+
+#heroes .heroIcons 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    height: 50%;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+/*********** IKONY *****************/
+
+.heroIcons .selectedIcon
+{
+    border: solid 1px #4AA4FF;
+}
+
+#skipper, #kowalski, #rico, #szeregowy, #julian, #maurice, #mort
+{
+    border-radius: 50%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#skipper
+{
+    background-image: url("../img/skipperHead.jpg");
+}
+
+#kowalski
+{
+    background-image: url("../img/kowalskiHead.jpg");
+}
+
+#rico
+{
+    background-image: url("../img/ricoHead.jpg");
+}
+
+#szeregowy
+{
+    background-image: url("../img/privateHead.jpg");
+}
+
+#julian
+{
+    background-image: url("../img/julianHead.jpg");
+}
+
+#maurice
+{
+    background-image: url("../img/mauriceHead.jpg");
+}
+
+#mort
+{
+    background-image: url("../img/mortHead.jpg");
+}
+/********************************************************/
+#heroes #heroIconsLemurs div, #heroes #heroIconsPenguins div
+{
+    display: flex;
+    width: 20%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+#heroes #heroImg
+{
+    width: 20vw;
+    height: 50vh;
+    margin-top: 5%;
+    margin-left: 10vw;
+    background-image: url("../img/skipper.png");
+}
+/******** KONIEC OPISU BOHATEROW *******************/
+
+/******* SPIS ODCINKOW ***************************/
+#episodes
+{
+    height: 125%;
+    order: 4;
+    background-color: orange;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+}
+
+#episodes > #episodesMenu
+{
+    height:5%;
+    flex-direction: row;
+}
+#episodes > #episodesMenu > div
+{
+    flex-direction: column;
+    width:15vw;
+    height:100%;
+    background-color: white;
+    text-align: center;
+    
+    transition: 0.5s;
+}
+
+#episodes > #episodesMenu > div:hover
+{
+    background-color: #3DB4CC;
+    transition: 0.5s;
+}
+
+#episodes > #episodesTable
+{
+	width: 50vw;
+    font-size: 100%;
+    margin-top: 2%;
+    background-color: lightblue;
+}
+
+table td, table th
+{
+    border: solid 1px;
+    vertical-align:middle;
+    text-align: center;
+}
+/******* KONIEC SPISU ODCINKOW *******************/
+
+
+/****** STOPKA ***************************/
+footer
+{
+    height: 10%;
+    position:absolute;
+        top: 354%;
+        left:0;
+    background-color: #3DB4CC;
+    z-index:100;
+}
+/******** KONIEC STOPKI ***************/
+
+/************** SCROLL ***********************/
+body::-webkit-scrollbar, #episodes > #episodesTable::-webkit-scrollbar
+{
+    width: 0.5em;
+    background-color: white;
+}
+body::-webkit-scrollbar-thumb, #episodes > #episodesTable::-webkit-scrollbar-thumb
+{
+    background-color: rgba(200,200,200,200);
+}
+/****** KONIEC SCROLL *********/
